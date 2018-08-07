@@ -1,0 +1,24 @@
+<!-- <ul>
+  <li><%= @task.completed %> <%= @task.title %> (<%= @task.details %>)</li>
+
+</ul> -->
+
+<h1>This is Task number <%= params[:id] %></h1>
+
+<ul>
+
+
+  <li>
+    <label class="checkbox">
+      <input type="checkbox"
+      <% if @task.completed %>
+      <%= "checked" %>>
+      <% end %>
+    </label>
+    <%= @task.title %> (<%= @task.details %>)
+  </li>
+
+
+  <li><%= link_to "Home", "/tasks"%></li>
+
+</ul>
